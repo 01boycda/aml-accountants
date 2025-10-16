@@ -24,7 +24,7 @@ const HomeSectionAbout = () => {
                     <h5 className=" text-center">At AML, we understand that every client is unique, and we tailor our approach to meet their specific needs. Whether you are a small business owner, an individual taxpayer, or a large corporation, we have the knowledge and resources to help you achieve your financial goals.</h5>
 
                     <FadeDiv className="w-[60%] center" direction="left" delay={1}>
-                        <Link className="z-10 center w-fit py-2 px-6 gap-x-3 rounded-full shadow-xl bg-lime-500" to="/contact">
+                        <Link className="z-10 center w-fit py-2 px-6 gap-x-3 rounded-full shadow-xl bg-lime-500" to="/about">
                             <h4>More about us</h4>
                             <i className='fa-solid fa-info-circle' />
                         </Link>

@@ -27,6 +27,9 @@ const Home = () => {
 		let currentTransY = -150;
 		let animFrame: number;
 
+		let isScrolling = false;
+		const scrollDelay = 500;
+
 		const animate = () => {
 			// Horizontal scroll
 			const targetX = -targetIndex * 100;
@@ -50,8 +53,15 @@ const Home = () => {
 
 		const handleWheel = (e: WheelEvent) => {
 			e.preventDefault();
+			if (isScrolling) return;
+
 			if (e.deltaY > 0) targetIndex = Math.min(numPanels - 1, targetIndex + 1);
 			else targetIndex = Math.max(0, targetIndex - 1);
+
+			isScrolling = true;
+			setTimeout(() => {
+				isScrolling = false;
+			}, scrollDelay);
 		};
 
 		animate();

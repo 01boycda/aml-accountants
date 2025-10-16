@@ -13,15 +13,10 @@ const Header = () => {
 
     return (
         <header>
-            <div className="flex justify-between w-full max-w-7xl">
-
-                <div className='flex items-center gap-4'>
-                    <img src={logo} className='m-2 aspect-auto h-[5vh]' />
-                    <i className='fa-solid fa-phone text-amber-500' />
-                    <h4 className='text-lime-500'>01132 250 067</h4>
-                </div>
+            <div className="flex items-center justify-between w-full max-w-7xl">
 
                 <nav className="hidden md:flex items-center gap-x-8">
+                    <img src={logo} className='m-2 aspect-auto h-[5vh]' />
                     {links.map(link => (
                         <NavLink
                             key={link.to}
@@ -43,6 +38,12 @@ const Header = () => {
                         </NavLink>
                     ))}
                 </nav>
+
+
+                <div className="center py-2 px-4 gap-4 border border-amber-500 rounded-full">
+                    <i className="fa-solid fa-phone text-amber-500" />
+                    <h4 className="text-lime-500">01132 250 067</h4>
+                </div>
 
             </div>
         </header>

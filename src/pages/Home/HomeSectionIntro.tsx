@@ -43,14 +43,13 @@ const HomeSectionIntro = () => {
             >
                 <defs>
                     <mask id="svgmask1" maskUnits="objectBoundingBox">
-                        {/* Animate polygon shape */}
                         <motion.polygon
                             fill="white"
-                            initial={{ points: "100,0 100,0 100,0" }} // start small at top-right
-                            animate={{ points: "40,0 100,0 100,100" }} // expand into final triangle
+                            initial={{ points: "100,0 100,0 100,0" }}
+                            animate={{ points: "40,0 100,0 100,100" }}
                             transition={{
                                 duration: 1.5,
-                                ease: [0.77, 0, 0.175, 1], // smooth cubic ease
+                                ease: [0.77, 0, 0.175, 1]
                             }}
                         />
                     </mask>

@@ -10,7 +10,7 @@ interface FadeInSectionProps {
 	once?: boolean;
 }
 
-const FadeDiv = ({ children, className, delay = 0, direction = "up", once = true }: FadeInSectionProps) => {
+const WipeDiv = ({ children, className, delay = 0, direction = "up", once = true }: FadeInSectionProps) => {
 
 	const controls = useAnimation();
 	const [ref, inView] = useInView({ triggerOnce: once, threshold: 0.1 });
@@ -24,19 +24,12 @@ const FadeDiv = ({ children, className, delay = 0, direction = "up", once = true
 	// ✅ Explicitly type the variants object
 	const variants: Variants = {
 		hidden: {
-			opacity: 0,
 			y: direction === "up" ? offset : direction === "down" ? -offset : 0,
-			x: direction === "left" ? offset : direction === "right" ? -offset : 0,
+			x: direction === "left" ? offset : direction === "right" ? -offset : 0
 		},
 		visible: {
-			opacity: 1,
-			x: 0,
-			y: 0,
-			transition: {
-				duration: 0.6,
-				delay,
-				ease: "easeOut",
-			},
+			x: 0, y: 0,
+			transition: { duration: 0.6, delay, ease: "easeOut" },
 		},
 	};
 
@@ -47,4 +40,4 @@ const FadeDiv = ({ children, className, delay = 0, direction = "up", once = true
 	);
 }
 
-export default FadeDiv
+export default WipeDiv

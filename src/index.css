@@ -58,12 +58,6 @@ body {
     --amber: #fd9a00;
 }
 
-header {
-    @apply z-10 fixed flex justify-center top-0 w-full h-[6vh] px-4;
-
-    background-color: var(--dark-blue);
-}
-
 a {
     color: var(--dark-blue);
     font-size: 20px;
@@ -127,6 +121,11 @@ p {
     font-size: calc(var(--multiplier) * 14px);
     font-weight: 100;
     line-height: calc(var(--multiplier) * 18px);
+}
+
+/* BACKGROUND COLOURS */
+.dark-blue-bg {
+    background-color: var(--dark-blue);
 }
 
 /* GRADIENTS */
